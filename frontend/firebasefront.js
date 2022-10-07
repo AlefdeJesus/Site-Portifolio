@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "Insira seus dados",
+    apiKey: "Insira seus dados...",
     authDomain: "Insira seus dados",
     projectId: "Insira seus dados",
     storageBucket: "Insira seus dados",
