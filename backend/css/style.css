@@ -1,0 +1,49 @@
+/*/////////////TELA DE LOGIN/////////////////////////////////////////////*/
+.titulo{
+    font-family: 'Alfa Slab One', cursive;
+    color: rgb(236, 203, 203);
+    font-size: 50px;
+}
+#bodylogin{
+    height: 100%;
+    background-image: linear-gradient(90deg,rgb(5, 5, 5),rgb(53, 58, 104),rgb(5,5,5));
+}
+ /*//////////////TELA DE PAINEL DE CONTROLE///////////////////////////////////*/ 
+#bodypainel{
+    background-image: linear-gradient(90deg,rgb(5, 5, 5),rgb(16, 12, 58),rgb(17, 29, 59));
+}
+.btnboasvindas{
+    background-color:rgb(94, 137, 201);
+}
+.btnboasvindas:hover{
+    background-color: rgb(99, 99, 212);
+}
+.colormsg{
+    color: red;
+}
+.link{
+    text-decoration: none;
+}
+.bglink{
+    background-color: rgb(53, 28, 121);
+}
+.bgcard{
+    background-image: linear-gradient(90deg,rgb(31, 43, 99),rgb(35, 27, 116),rgb(38, 61, 119));
+}
+.colorbtn{
+    background-color: rgb(38, 56, 88);
+}
+.colorbtn:hover{
+    background-color: #333;
+}
+.btnexcluir{
+     background-color:red;
+}
+.btnexcluir:hover{
+     background-color:black;
+}
+#imglink{
+    width: 80px;
+    border-radius: 50%;
+    border:2px solid red;
+}

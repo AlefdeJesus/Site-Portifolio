@@ -1,0 +1,74 @@
+body{
+    background-color: black;
+ 
+}
+#imgperfil{
+    width: 90px;
+    border-radius: 50%;
+    border:2px solid red;
+}
+.pesofont{
+    font-weight: 500;
+}
+.tamletracont{
+    font-size: 0.9rem;
+}
+.tamicon{
+    width: 2rem;
+}
+.colortext{
+    color: #837E9F;
+   
+}
+a{
+    text-decoration: none;
+}
+.colorbtn{
+    background-color: rgb(38, 56, 88);
+}
+.colorbtn:hover{
+    background-color: #333;
+}
+/* GLOBAL STYLES */
+   /*USANDO UMA FONTE INTERNA (BAIXADA) PARA A LOGO*/
+   @font-face {
+    font-family:'boasvindas';
+    url('../midias/fonts/CutiveMono-Regular.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background: #333;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+  }
+  /*ESTILO DE DIGITAÇÃO DE SEJA BEM VINDO*/
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h2 {
+    color: green;
+    font-family: "boasvindas";
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }

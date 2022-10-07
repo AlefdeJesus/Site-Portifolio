@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Painel de Controle</title>
+  </head>
+  <body id="bodypainel">
+    <div class="container">
+      <header>
+        <div class="mt-5">
+          <h1 class="text-center text-white">Painel de Controle</h1>
+        </div>
+    </header>
+      <div class="row">
+        <div class="bg-dark p-5 col-md-12 rounded-3 text-center">
+          <span class="text-white fs-3 fw-bold">Foto de Perfil</span>
+          <div class="m-5 p-3">
+          <div id="imgperfil"></div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile01" name="arquivo">
+        </div>
+       <div>
+        <div>
+          <label class="text-white">Barra de progresso</label>
+        </div class="progress">
+        <progress value="0" class="p-3" ></progress>
+       </div>
+      </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 bg-dark fw-bold mt-3 rounded-3 p-5 text-center">
+            <span class="text-white fs-3 ">Mensagem de Boas Vindas</span>
+            <div class="input-group mb-3 ">
+              <input type="text" class="form-control p-3" id="inputboasvindas" placeholder="Seja Bem Vindo!" aria-label="Recipient's username" aria-describedby="button-addon2">
+            </div>
+              <button class="p-1 fw-bold btnboasvindas rounded-3"  id="btnboasvindas">Adicionar</button>
+              <button class="p-1 fw-bold btnboasvindas rounded-3"  id="apagarmsg" >Apagar Mensagem</button>
+             <div><p class="text-white">Mensagem Atual:</p>
+              <div id="saida"></div>
+             </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 bg-dark mt-3 p-5 text-center rounded-3 ">
+              <p class="text-white fs-3 fw-bold">Projetos Concluído</p>
+              <div>
+                <span class="text-white">Nome do Projeto</span>
+                  <input type="text" class="form-control" name="" placeholder="Dar um nome para o link" id="nomeprojeto">
+              </div>
+              <div >
+                <label class="text-white">Link do Projeto</label>
+                <input type="text" class="form-control" name="" placeholder="Precisa colocar o https://" id="linkprojeto">
+              </div>
+              <button class="p-1 fw-bold btnboasvindas rounded-3 m-2" id="btnpjconcluido">Adicionar</button>
+              <table class="text-center">
+                  <p class="text-white fw-bold fs-5">Projetos na tela:</p>
+                    <tbody id="tbody"></tbody>
+              </table>
+           </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 bg-dark mt-3 p-5 text-center rounded-3 ">
+            <p class="text-white fs-3 fw-bold">Projetos em Andamento</p>
+            <div>
+              <label class="text-white">Nome do Projeto</label>
+                <input type="text" class="form-control" id="andamentonome" placeholder="Dar um nome para o link">
+            </div>
+            <div >
+              <label class="text-white">Link do Projeto</label>
+              <input type="text" class="form-control" id="andamentolink" placeholder="Precisa colocar o https://">
+            </div>
+            <button class="p-1 fw-bold btnboasvindas rounded-3 m-2" id="btnpjandamento">Adicionar</button>
+            <table class="text-center">
+              <p class="text-white fw-bold fs-5">Projetos na tela:</p>
+                <tbody id="tbody1"></tbody>
+          </table>
+        </div>
+    </div>
+	 <div class="row">
+        <div class="col-md-12 bg-dark mt-3 p-5 text-center rounded-3 ">
+            <p class="text-white fs-3 fw-bold">Dicas de Segurança</p>
+            <div>
+              <label class="text-white">Nome</label>
+                <input type="text" class="form-control" id="nomedica" placeholder="Phishing">
+            </div>
+			<div>
+              <label class="text-white">Titulo</label>
+                <input type="text" class="form-control" id="titulodica" placeholder="Cuidado com Phishing">
+            </div>
+            <div >
+              <span class="text-white">Texto 1</span>
+				<div class="form-floating">
+					  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" style="height: 100px"></textarea>
+					  <label for="floatingTextarea2">Paragrafo 1</label>
+				</div>
+				<span class="text-white">Texto 2</span>
+				<div class="form-floating">
+					  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+					  <label for="floatingTextarea2">Paragrafo 2</label>
+				</div>
+            </div>
+            <button class="p-1 fw-bold btnboasvindas rounded-3 m-2" id="btndicasseg">Adicionar</button>
+            <table class="text-center">
+              <p class="text-white fw-bold fs-5">Dicas Na tela:</p>
+                <tbody id="tbody3"></tbody>
+          </table>
+        </div>
+    </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <script src="../dadosfirebase.js"></script>
+    <script src="../scripts/boasvindas.js"></script>
+    <script src="../scripts/pjconcluido.js"></script>
+    <script src="../scripts/pjandamento.js"></script>
+	  <script src="../scripts/dicasdeseg.js"></script>
+    <script src="../scripts/storage.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--CDN jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </body>
+</html>
